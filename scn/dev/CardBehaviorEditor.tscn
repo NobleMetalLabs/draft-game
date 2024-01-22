@@ -1,0 +1,83 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct0http1wnjx3"]
+
+[ext_resource type="Theme" uid="uid://buo11jw8ac2ew" path="res://ast/ui/CardBehaviorEditorTheme.tres" id="1_onhv0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0cgyb"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="CardBehaviorEditor" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_onhv0")
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_0cgyb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 15
+
+[node name="MenuBar" type="MenuBar" parent="Panel/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+flat = true
+
+[node name="File" type="PopupMenu" parent="Panel/VBoxContainer/MarginContainer/MenuBar"]
+item_count = 3
+item_0/text = "Open"
+item_0/id = 0
+item_1/text = "Save"
+item_1/id = 1
+item_2/text = "Exit"
+item_2/id = 2
+
+[node name="Edit" type="PopupMenu" parent="Panel/VBoxContainer/MarginContainer/MenuBar"]
+
+[node name="View" type="PopupMenu" parent="Panel/VBoxContainer/MarginContainer/MenuBar"]
+
+[node name="GraphEdit" type="GraphEdit" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+connection_lines_antialiased = false
+minimap_enabled = false
+show_zoom_buttons = false
+show_minimap_button = false
+show_arrange_button = false
+
+[node name="GraphNode" type="GraphNode" parent="Panel/VBoxContainer/GraphEdit"]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 81.0
+offset_right = 171.0
+offset_bottom = 138.0
+mouse_filter = 1
+position_offset = Vector2(97, 81)
+title = "GetSelf"
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+
+[node name="Control" type="Control" parent="Panel/VBoxContainer/GraphEdit/GraphNode"]
+layout_mode = 2
