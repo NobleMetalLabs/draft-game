@@ -6,7 +6,7 @@ extends Resource
 @export var id : int
 @export var name : String
 var description : String : 
-	get: return logic_script.new().description
+	get: return behavior.description
 @export var image : Texture
 @export var type : String
 @export_enum("Common", "Rare", "Mythic", "Epic") var rarity: String = "Common"
@@ -15,5 +15,5 @@ var description : String :
 @export var hp : int
 @export var power : int
 @export var defense : int
-@export_group("Logic")
-@export var logic_script : GDScript
+@export_group("Behavior")
+@export var behavior : CardBehaviorGraph

@@ -26,9 +26,9 @@ func place_card(player : Player, metadata : CardMetadata, position : Vector2) ->
 	var new_card : CardInstanceOnField = ObjectDB._CardInstanceOnField.create(self, metadata, player)
 	new_card.position = position
 
-	self.event.connect(func(event_name : StringName, data : Dictionary) -> void:
-		new_card.logic.process_event(event_name, data)
-	)
+	# self.event.connect(func(event_name : StringName, data : Dictionary) -> void:
+	# 	new_card.logic.process_event(event_name, data)
+	# )
 	new_card.mouse_entered.connect(
 		func() -> void:
 			_hovered_card = new_card

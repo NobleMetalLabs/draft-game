@@ -1,7 +1,7 @@
 class_name CardInstanceOnField
 extends CardInstance
 
-var logic : CardLogic
+var behavior : CardBehaviorGraph
 var gamefield : Gamefield
 var player_owner : Player
 
@@ -9,8 +9,7 @@ var player_owner : Player
 
 func _setup(_gamefield: Gamefield, _metadata : CardMetadata, _player_owner: Player) -> void:
 	metadata = _metadata
-	logic = metadata.logic_script.new()
-	logic.owner = self
+	behavior = metadata.CardBehaviorGraph.new()
 	gamefield = _gamefield
 	player_owner = _player_owner
 
