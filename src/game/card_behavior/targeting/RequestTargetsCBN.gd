@@ -7,5 +7,7 @@ func _init() -> void:
 		[CardBehaviorArgumentArray.targetable("attacker")],
 	)
 
+#TODO: handle async functions
+
 # func process(api : CardBehaviorAPI, inputs : Array) -> Array:
 	#return []

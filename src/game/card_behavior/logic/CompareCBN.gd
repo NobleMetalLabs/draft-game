@@ -12,5 +12,5 @@ func _init() -> void:
 		]
 	)
 
-# func process(api : CardBehaviorAPI, inputs : Array) -> Array:
-	#return []
+func process(_api : CardBehaviorAPI, inputs : Array) -> Array:
+	return inputs[0] == inputs[1]
