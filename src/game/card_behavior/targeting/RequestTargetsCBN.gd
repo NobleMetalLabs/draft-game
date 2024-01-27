@@ -1,11 +1,11 @@
 class_name RequestTargetsCBN
 extends CardBehaviorNode
 
-func _init(_api : CardBehavoirAPI) -> void:
-	super(_api,
+func _init() -> void:
+	super(
 		[], 
 		[CardBehaviorArgumentArray.targetable("attacker")],
 	)
 
-# func process(inputs : Array) -> Array:
+# func process(api : CardBehaviorAPI, inputs : Array) -> Array:
 	#return []

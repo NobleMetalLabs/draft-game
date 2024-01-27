@@ -1,8 +1,8 @@
 class_name ModifyStatisticCBN
 extends CardBehaviorNode
 
-func _init(_api : CardBehavoirAPI) -> void:
-	super(_api,
+func _init() -> void:
+	super(
 	[
 		CardBehaviorArgument.targetable("target"), 
 		CardBehaviorArgument.string_name("stat_name"),
@@ -10,5 +10,5 @@ func _init(_api : CardBehavoirAPI) -> void:
 	], [],
 	)
 
-# func process(inputs : Array) -> Array:
+# func process(api : CardBehaviorAPI, inputs : Array) -> Array:
 	#return []

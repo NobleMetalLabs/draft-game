@@ -1,2 +1,2 @@
-class_name CardBehavoirAPI
+class_name CardBehaviorAPI
 extends Object

@@ -5,5 +5,5 @@ var node_logic : CardBehaviorNode
 var inputs : Array[CardBehaviorNodeInstance]
 var outputs : Array[CardBehaviorNodeInstance]
 
-func process(input : Array) -> Array:
-	return node_logic.process(input)
+func process(api : CardBehaviorAPI, input : Array) -> Array:
+	return node_logic.process(api, input)

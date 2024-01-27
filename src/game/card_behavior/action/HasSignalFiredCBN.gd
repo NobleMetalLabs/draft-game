@@ -1,8 +1,8 @@
 class_name HasSignalFiredCBN
 extends CardBehaviorNode
 
-func _init(_api : CardBehavoirAPI) -> void:
-	super(_api,
+func _init() -> void:
+	super(
 		[
 			CardBehaviorArgument.targetable("target"), 
 			CardBehaviorArgument.string_name("signal"),
@@ -12,5 +12,5 @@ func _init(_api : CardBehavoirAPI) -> void:
 		]
 	)
 
-# func process(inputs : Array) -> Array:
+# func process(api : CardBehaviorAPI, inputs : Array) -> Array:
 	#return []

@@ -1,8 +1,8 @@
 class_name CountCBN
 extends CardBehaviorNode
 
-func _init(_api : CardBehavoirAPI) -> void:
-	super(_api,
+func _init() -> void:
+	super(
 		[
 			CardBehaviorArgument.bool("pInput"), 
 			CardBehaviorArgument.bool("sInput"),
@@ -13,5 +13,5 @@ func _init(_api : CardBehavoirAPI) -> void:
 		]
 	)
 
-# func process(inputs : Array) -> Array:
+# func process(api : CardBehaviorAPI, inputs : Array) -> Array:
 	#return []
