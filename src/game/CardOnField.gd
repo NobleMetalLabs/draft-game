@@ -1,5 +1,16 @@
-class_name CardInstanceOnField
-extends CardInstance
+class_name CardOnField
+extends Control
+
+#implements ICardInstance
+var metadata : CardMetadata :
+	get:
+		return ICardInstance.id(self).metadata
+	set(value):
+		ICardInstance.id(self).metadata = value
+
+#implements ITargetable
+func get_boundary_rectangle() -> Rect2:
+	return texture_rect.get_global_rect()
 
 var logic : CardLogic
 var gamefield : Gamefield
@@ -11,7 +22,7 @@ var player_owner : Player
 func _setup(_gamefield: Gamefield, _metadata : CardMetadata, _player_owner: Player) -> void:
 	metadata = _metadata
 	logic = metadata.logic_script.new()
-	logic.owner = self
+	logic.owner = ICardInstance.id(self)
 	gamefield = _gamefield
 	player_owner = _player_owner
 
@@ -38,7 +49,7 @@ var dragging : bool = false
 var dragging_offset : Vector2 = Vector2.ZERO
 
 var selecting_target : bool = false
-var target : CardInstance = null
+var target : ITargetable = null
 var target_arrow : Arrow2D = Arrow2D.new()
 
 func _process(_delta : float) -> void:
@@ -49,16 +60,18 @@ func _process(_delta : float) -> void:
 	
 	target_arrow.visible = (target != null or selecting_target)
 	
+	var self_rect : Rect2 = self.get_boundary_rectangle()
 	if selecting_target:
-		target_arrow.position = self.get_vector_to_edge_at_angle(get_local_mouse_position().angle())
+		target_arrow.position = Utils.get_vector_to_rectangle_edge_at_angle(self_rect, get_local_mouse_position().angle())
 		target_arrow.end_position = get_parent().get_local_mouse_position()
 		if not Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
 			end_target()
-	elif target != null: 
-		var target_dir_angle : float = self.global_position.angle_to_point(target.global_position)
-		var to_edge : Vector2 = target.get_vector_to_edge_at_angle(target_dir_angle)
-		target_arrow.position = self.get_vector_to_edge_at_angle(target_dir_angle)
-		target_arrow.end_position = (target.global_position - to_edge)
+	elif target != null:
+		var target_rect : Rect2 = target.get_boundary_rectangle()
+		var target_dir_angle : float = self_rect.get_center().angle_to_point(target_rect.get_center())
+		var to_edge : Vector2 = Utils.get_vector_to_rectangle_edge_at_angle(target_rect, target_dir_angle)
+		target_arrow.position = Utils.get_vector_to_rectangle_edge_at_angle(self_rect, target_dir_angle)
+		target_arrow.end_position = (target_rect.get_center() - to_edge)
 
 func start_drag() -> void:
 	dragging = true
@@ -73,4 +86,7 @@ func start_target() -> void:
 
 func end_target() -> void:
 	selecting_target = false
-	target = gamefield.get_hovered_card()
+	var hovered : ICardInstance = gamefield.client_ui.get_hovered_card()
+	target = null
+	if hovered != null:
+		target = ITargetable.id(hovered)
