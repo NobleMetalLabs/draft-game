@@ -4,9 +4,13 @@ extends Control
 @onready var card_info_panel : CardInfoPanel = $"%CARD-INFO-PANEL"
 @onready var target_sprite : Sprite2D = $TargetSprite
 @onready var hand_ui : HandUI = $"%HAND-UI"
+@onready var multiplayer_ui : MultiplayerPanel = $"%MULTIPLAYER-PANEL"
 
 @onready var dev_effect_viewer : EffectResolverViewer = $"%EFFECT-RESOLVER-VIEWER"
 @onready var dev_card_viewer : CardDataViewer = $"%CARD-DATA-VIEWER"
+
+	multiplayer_ui.host_game.connect(MultiplayerManager.host_game)
+	multiplayer_ui.join_game.connect(MultiplayerManager.join_game)
 
 @export var gamefield : Gamefield
 
