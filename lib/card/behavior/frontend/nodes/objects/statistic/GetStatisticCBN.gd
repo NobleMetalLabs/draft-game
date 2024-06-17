@@ -22,4 +22,5 @@ func _init() -> void:
 			CardBehaviorArgument.tiered_indexed_options_statistic()
 		]
 	)
+	transpilation("IStatisticPossessor.id(<object>).get_statistic(Genesis.Statistic.<statistic>)")
 

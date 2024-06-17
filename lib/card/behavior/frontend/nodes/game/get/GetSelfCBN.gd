@@ -6,6 +6,6 @@ func _init() -> void:
 		[], 
 		[
 			CardBehaviorArgument.object("self")
-		]
+		],
 	)
-
+	transpilation("instance_owner")

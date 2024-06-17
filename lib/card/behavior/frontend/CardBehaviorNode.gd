@@ -32,6 +32,10 @@ func _variant_check() -> void:
 			return
 	push_error("CardBehaviorNode: To use arguments of Variant type, the first option must be a \"domain\" `indexed_options`.")
 
+var expression : String = ""
+func transpilation(transpilation_expression : String) -> void:
+	expression = transpilation_expression
+
 static func load_node(_name : String) -> CardBehaviorNode:
 	return load(load_nodes()[_name + "CBN"]).new()
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dixyk1dbqtra3"]
+[gd_scene load_steps=3 format=3 uid="uid://dixyk1dbqtra3"]
 
 [ext_resource type="Script" path="res://src/dev/transpiler_test.gd" id="1_voqnq"]
+[ext_resource type="FontFile" uid="uid://d2gqh1qwes1bj" path="res://ast/ui/fonts/unifont.ttf" id="2_rh2lj"]
 
 [node name="TranspilerTest" type="Control"]
 layout_mode = 3
@@ -11,25 +12,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_voqnq")
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 599.0
-offset_top = 404.0
-offset_right = 811.0
-offset_bottom = 509.0
-text = "Submit"
-
-[node name="LineEdit" type="LineEdit" parent="."]
-layout_mode = 0
-offset_left = 254.0
-offset_top = 220.0
-offset_right = 519.0
-offset_bottom = 318.0
-
-[node name="LABEL" type="Label" parent="."]
+[node name="TEXT-EDIT" type="TextEdit" parent="."]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = 929.0
-offset_top = 231.0
-offset_right = 1122.0
-offset_bottom = 333.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -669.0
+offset_top = -400.5
+offset_right = 669.0
+offset_bottom = 400.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_rh2lj")
+theme_override_font_sizes/font_size = 24

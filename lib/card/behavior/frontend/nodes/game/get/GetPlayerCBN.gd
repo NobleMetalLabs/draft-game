@@ -10,4 +10,4 @@ func _init() -> void:
 			CardBehaviorArgument.object("player")
 		]
 	)
-
+	transpilation("<object>.player")
