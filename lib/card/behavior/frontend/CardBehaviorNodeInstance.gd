@@ -11,7 +11,4 @@ func _init(_config : CardBehaviorNode, _arg_values : Dictionary = {}) -> void:
 		argument_values[arg.name] = arg.default
 	argument_values.merge(_arg_values, true)
 
-func transpile() -> String:
-	var code : String = self.config.expression
-	# Replace arguments
-	return code
+func transpile() -> String: return self.config.expression
