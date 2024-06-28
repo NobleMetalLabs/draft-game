@@ -205,13 +205,13 @@
                 <mxCell id="KD4MuBQ3sgmvFhbieZwp-12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="KD4MuBQ3sgmvFhbieZwp-10" vertex="1">
                     <mxGeometry y="26" width="150" height="8" as="geometry"/>
                 </mxCell>
-                <mxCell id="KD4MuBQ3sgmvFhbieZwp-18" value="CreatureLeavePlayAction" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="YlGuR3tyBmcKfDzW1rRZ-1" vertex="1">
+                <mxCell id="KD4MuBQ3sgmvFhbieZwp-18" value="CreatureLeaveFieldAction" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="YlGuR3tyBmcKfDzW1rRZ-1" vertex="1">
                     <mxGeometry x="-1150" y="-1068.5" width="250" height="86" as="geometry"/>
                 </mxCell>
                 <mxCell id="oTFinJ9ibBzCrm9JZMaH-62" value="source : ICardInstance" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="KD4MuBQ3sgmvFhbieZwp-18" vertex="1">
                     <mxGeometry y="26" width="250" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="KD4MuBQ3sgmvFhbieZwp-19" value="reason : LeavePlayReason.&lt;Death, Banish&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="KD4MuBQ3sgmvFhbieZwp-18" vertex="1">
+                <mxCell id="KD4MuBQ3sgmvFhbieZwp-19" value="reason : LeaveFieldReason.&lt;Death, Banish&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="KD4MuBQ3sgmvFhbieZwp-18" vertex="1">
                     <mxGeometry y="52" width="250" height="26" as="geometry"/>
                 </mxCell>
                 <mxCell id="KD4MuBQ3sgmvFhbieZwp-20" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="KD4MuBQ3sgmvFhbieZwp-18" vertex="1">

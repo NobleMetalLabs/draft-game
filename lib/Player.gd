@@ -4,6 +4,7 @@ extends Node
 var deck : Deck 
 var cards_in_hand : Array[CardInHand] = []
 var cards_on_field : Array[CardOnField] = []
+var cards_in_limbo : Array[ICardInstance] = []
 var leader : ICardInstance
 
 func _init() -> void:

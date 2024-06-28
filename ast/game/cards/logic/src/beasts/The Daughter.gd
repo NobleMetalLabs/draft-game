@@ -7,7 +7,7 @@ func process(_gs : GamefieldState, effect_resolver : EffectResolver) -> void:
 	if my_stats.get_statistic(Genesis.Statistic.JUST_DIED):
 		var attacker : ICardInstance = my_stats.get_statistic(Genesis.Statistic.MOST_RECENT_ATTACKED_BY)
 		effect_resolver.request_effect(
-			CreatureLeavePlayEffect.new(
+			CreatureLeaveFieldEffect.new(
 				instance_owner,
 				attacker.get_object(),
 				instance_owner

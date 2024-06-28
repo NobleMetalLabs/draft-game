@@ -12,7 +12,7 @@ func _init() -> void:
 					"CreatureActivateEffect",
 					"CreatureAttackEffect",
 					"CreatureCooldownEffect",
-					"CreatureLeavePlayEffect",
+					"CreatureLeaveFieldEffect",
 					"CreatureSpawnEffect",
 					"CreatureTargetEffect",
 					"DeckAddCardEffect",

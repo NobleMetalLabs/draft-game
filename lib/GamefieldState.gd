@@ -13,6 +13,9 @@ var cards : Array[ICardInstance] :
 			for card in p.cards_on_field:
 				if is_instance_valid(card):
 					out.append(ICardInstance.id(card))
+			for card in p.cards_in_limbo:
+				if is_instance_valid(card):
+					out.append(ICardInstance.id(card))
 			for card in p.deck.get_cards():
 				if is_instance_valid(card):
 					out.append(ICardInstance.id(card))

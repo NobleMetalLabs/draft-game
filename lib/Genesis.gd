@@ -50,6 +50,14 @@ enum CardTribe {
 	WEATHER,
 }
 
+# Zones
+
+enum CardZone {
+	DECK,
+	HAND,
+	FIELD,
+}
+
 # Actions and Events
 
 # CreatureCooldown*
@@ -63,11 +71,12 @@ enum CooldownStage {
 	FINISH,
 }
 
-# CreatureLeavePlay*
-enum LeavePlayReason {
+# CreatureLeaveField*
+enum LeaveFieldReason {
 	DIED,
-	BANISHED,
 	SACRIFICED,
+	RECALLED,
+	BANISHED,
 }
 
 # HandRemoveCard*
@@ -77,12 +86,12 @@ enum LeaveHandReason {
 	BURNED,
 	BANISHED,
 }
-enum CardRemoveAnimation {
-	INHERIT,
-	PLAY,
-	DISCARD,
-	BURN,
-	BANISH,
+
+# DeckRemoveCard*
+enum LeaveDeckReason {
+	DRAWN,
+	PLAYED,
+	BANISHED,
 }
 
 # Statistics

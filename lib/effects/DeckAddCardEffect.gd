@@ -1,5 +1,5 @@
 class_name DeckAddCardEffect
-extends PlayerEffect
+extends DeckEffect
 
 var card : ICardInstance
 var as_marked : bool

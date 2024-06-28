@@ -15,7 +15,7 @@ func process(_gs : GamefieldState, effect_resolver : EffectResolver) -> void:
 	if my_stats.get_statistic(Genesis.Statistic.JUST_TARGETED):
 		var target : ITargetable = my_stats.get_statistic(Genesis.Statistic.TARGET)
 		effect_resolver.request_effect(
-			CreatureLeavePlayEffect.new(
+			CreatureLeaveFieldEffect.new(
 				instance_owner,
 				ICardInstance.id(target),
 				instance_owner,
