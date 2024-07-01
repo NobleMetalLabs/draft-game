@@ -1,6 +1,6 @@
 extends CardLogic
 
-static var description : StringName = "Targeted creature recieves Enlightened."
+static var description : StringName = "Targeted creature recieves Quick."
 
 var previous_target : ITargetable = null
 
@@ -19,7 +19,7 @@ func process(_gs : GamefieldState, effect_resolver : EffectResolver) -> void:
 			ApplyMoodEffect.new(
 				instance_owner,
 				IMoodPossessor.id(target), 
-				StatisticMood.ENLIGHTENED(instance_owner)
+				StatisticMood.QUICK(instance_owner)
 			)
 		)
 		previous_target = target
